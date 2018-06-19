@@ -40,13 +40,13 @@ def PGCD(A, B):
 	if A <= 0 or B <= 0:
 		print("Les nombres ne peuvent pas être égaux ou inférieur à 0")
 		sys.exit()
-	elif A >= 1000 or B >= 1000:
+	elif A >= 100000000 or B >= 100000000:
 		print("Les nombres ne peuvent pas être au-dessus de 1000")
 		sys.exit()
 	divA = []
 	divB = []
 	divcom = []
-	for x in range(1,1000):
+	for x in range(1, A+1):
 		calc = int(A)/x
 		if calc == int(round(calc)):
 			if x in divA:
@@ -55,7 +55,7 @@ def PGCD(A, B):
 				divA.append(int(x))
 		else:
 			pass
-	for i in range(1,1000):
+	for i in range(1,B+1):
 		ca = int(B)/i
 		if ca == int(round(ca)):
 			if i in divB:
@@ -64,7 +64,7 @@ def PGCD(A, B):
 				divB.append(i)
 		else:
 			pass
-	for nb in range(1000):
+	for nb in range(max(A, B)+1):
 		if nb in divA and nb in divB:
 			if nb in divcom:
 				pass
