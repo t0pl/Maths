@@ -3,7 +3,7 @@ from math import sqrt
 
 
 def main():
-    for i in range(1, 1000):
+    for i in range(1, nb+1):
         if nb/i == round(nb/i):
             print(nb, "est divisible par", i,)
             print(nb, "divisé par", i, "vaut", nb/i)
